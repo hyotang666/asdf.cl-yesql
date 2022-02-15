@@ -2,9 +2,12 @@
 (in-package :asdf)
 (defsystem "asdf.cl-yesql"
   :version
-  "0.0.0"
+  "0.1.0"
   :depends-on
-  nil
+  (
+   "vernacular" ; Module system, implicitly depends on via cl-yesql.
+   "overlord"   ; Build system, implicitly depends on via cl-yesql.
+   )
   :pathname
   "src/"
   :components
